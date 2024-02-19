@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import ScrollReveal from 'scrollreveal'
 import "./Banner.css"
 
 const Banner = () => {
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '80px',
+        duration: 2000,
+        reset: true,
+    });
+
+    sr.reveal('.banner-heading', {})
+
+    return () => sr.destroy();
+}, []);
+
   return (
     <>
       <div className="banner">

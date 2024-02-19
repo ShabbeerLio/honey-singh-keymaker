@@ -1,78 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Services.css"
+import ScrollReveal from 'scrollreveal'
+import Data from '../Data/Data'
 
 const Services = () => {
+
+  const [serviceData, setServiceData] = useState(Data);
+
+  useEffect(() => {
+    const sr = ScrollReveal({
+      origin: 'bottom',
+      distance: '80px',
+      duration: 2000,
+      reset: true,
+    });
+
+    sr.reveal('.service-box', {})
+
+    return () => sr.destroy();
+  }, []);
+
   return (
     <>
       <div className="services">
         <div className="service-box">
           <h2>Our Services</h2>
           <div className="service-box-main">
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            <div className="services-cards">
-              <div className="services-cards-image">
-                <img src="https://images.unsplash.com/photo-1562343750-446a1e7693b6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyJTIwa2V5c3xlbnwwfHwwfHx8MA%3D%3D" alt="" />
-              </div>
-              <div className="services-cards-title">
-                <h5>Computerised Key</h5>
-              </div>
-            </div>
-            
+            {serviceData.map((item) => (
+              <>
+                <div className="services-cards" key={item.id}>
+                  <div className="services-cards-image">
+                    <a href="">
+                      <img src={item.cover} alt="" />
+                    </a>
+                  </div>
+                  <div className="services-cards-title">
+                    <h5>{item.title}</h5>
+                  </div>
+                </div>
+              </>
+            ))}
           </div>
         </div>
       </div>

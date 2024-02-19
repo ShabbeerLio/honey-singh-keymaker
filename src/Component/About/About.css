@@ -25,6 +25,7 @@
     padding-bottom: 23px;
     font-weight: bold;
 }
+
 .about-detail p {
     margin: 0 0 0px 0;
     font-weight: 400;
@@ -36,12 +37,43 @@
 .about-right {
     width: 30%;
 }
-.about-right img{
+
+.about-right img {
     rotate: 90deg;
 }
 
 @media (min-width: 1200px) {
     .about-main {
         max-width: 1140px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+
+    .about-main {
+        max-width: 720px;
+    }
+}
+@media only screen and (max-width: 680px) {
+
+    .about-main {
+        gap: 0;
+        display: block;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-right {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-main {
+        max-width: 520px;
     }
 }

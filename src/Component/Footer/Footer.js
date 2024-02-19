@@ -1,8 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Footer.css"
 import Logo from "../../Assets/Logo.png"
+import footerimg1 from "../../Assets/service5.jpg"
+import footerimg2 from "../../Assets/service4.jpg"
+import footerimg3 from "../../Assets/service2.jpg"
+import footerimg4 from "../../Assets/service8.jpg"
+import footerimg5 from "../../Assets/service7.jpg"
+import footerimg6 from "../../Assets/service1.jpg"
 
 const Footer = (props) => {
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section[id]');
+
+        function scrollActive() {
+            const scrollY = window.scrollY;
+
+            sections.forEach(current => {
+                const sectionHeight = current.offsetHeight;
+                const sectionTop = current.offsetTop - 50;
+                const sectionId = current.getAttribute('id');
+
+                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                    document.querySelector(`.nav-menu a[href*=${sectionId}]`).classList.add('active-link');
+                } else {
+                    document.querySelector(`.nav-menu a[href*=${sectionId}]`).classList.remove('active-link');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', scrollActive);
+
+        return () => {
+            window.removeEventListener('scroll', scrollActive);
+        };
+    }, []);
+
+    const [menuClass, setMenuClass] = useState('nav-menu');
+
+    const toggleMenu = () => {
+        setMenuClass(menuClass === 'nav-menu' ? 'nav-menu responsive' : 'nav-menu');
+    };
+
+    // Function to close the menu when a navigation link is clicked
+    const closeMenu = () => {
+        setMenuClass('nav-menu');
+    };
     return (
         <>
             <div className="footer">
@@ -14,16 +57,16 @@ const Footer = (props) => {
                     <div className="quick-link">
                         <h2>Quick Link</h2>
                         <ul>
-                            <li><a href="/">
+                            <li><a href="#home">
                                 HOME
                             </a></li>
-                            <li><a href="/about-us">
+                            <li><a href="#about">
                                 ABOUT US
                             </a></li>
-                            <li><a href="/our-services">
+                            <li><a href="#services">
                                 OUR SERVICES
                             </a></li>
-                            <li><a href="/contact-us">
+                            <li><a href="#contactUs">
                                 CONTACT US
                             </a></li>
                         </ul>
@@ -31,12 +74,12 @@ const Footer = (props) => {
                     <div className="footer-services">
                         <h2>Services</h2>
                         <div className="services-images">
-                            <img src="" alt="" />
-                            <img src="" alt="" />
-                            <img src="" alt="" />
-                            <img src="" alt="" />
-                            <img src="" alt="" />
-                            <img src="" alt="" />
+                            <img src={footerimg1} alt="" />
+                            <img src={footerimg2} alt="" />
+                            <img src={footerimg3} alt="" />
+                            <img src={footerimg4} alt="" />
+                            <img src={footerimg5} alt="" />
+                            <img src={footerimg6} alt="" />
                         </div>
                     </div>
                     <div className="footer-contact">
@@ -65,8 +108,8 @@ const Footer = (props) => {
                                             </path>
                                         </g>
                                     </svg></p>
-                                <a href="tel: 8439918596">
-                                    8439918596
+                                <a href="tel: +918439918596">
+                                    +91 8439918596
                                 </a>
                             </li>
                             <li>
@@ -87,12 +130,14 @@ const Footer = (props) => {
                                         </g>
                                     </svg>
                                 </p>
-                                <a href="tel: 9899461219">
-                                    9899461219
+                                <a href="tel: +919899461219">
+                                    +91 9899461219
                                 </a>
                             </li>
                         </ul>
                     </div>
+                </div>
+                <div className="footer-down">
                     <div className="footer-copyright">
                         <p>© 2023 Honey Singh Key Maker</p>
                         <p>Designed By :<a href="https://globalitsources.com/"> Global IT Sources</a></p>
