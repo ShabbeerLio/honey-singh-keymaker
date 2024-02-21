@@ -40,6 +40,10 @@
     color: white;
 }
 
+.footer-contact ul li p {
+    margin: 0;
+    padding: 5px 0px;
+}
 .footer-contact ul li p svg {
     margin-right: 10px;
 }
@@ -58,7 +62,7 @@
 }
 .footer-copyright p{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding-top: 1rem;
     color: white;
     text-decoration: none;

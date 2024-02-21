@@ -52,7 +52,7 @@ const Footer = (props) => {
                 <div className="footer-main">
                     <div className="footer-detail">
                         <img src={Logo} alt="" />
-                        <p>We understand the urgency of lock and key problems. When you call us, expect a quick response and efficient solutions.</p>
+                        <p>We prioritize customer satisfaction and security. Trust us to be your go-to key maker.</p>
                     </div>
                     <div className="quick-link">
                         <h2>Quick Link</h2>
@@ -139,7 +139,7 @@ const Footer = (props) => {
                 </div>
                 <div className="footer-down">
                     <div className="footer-copyright">
-                        <p>© 2023 Honey Singh Key Maker</p>
+                        <p>© 2024 Near Me Key Makerr</p>
                         <p>Designed By :<a href="https://globalitsources.com/"> Global IT Sources</a></p>
                     </div>
                 </div>

@@ -23,7 +23,7 @@ const Banner = () => {
         <div className="banner-heading">
           <h1 >Key Maker in Gaur City</h1>
         </div>
-        <img src="https://images.unsplash.com/photo-1585336261176-3e8d838e86e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" />
+        <img src="https://media.istockphoto.com/id/1185097959/photo/a-mans-hand-holding-a-car-key.jpg?s=612x612&w=0&k=20&c=5rdk5ibFfwF1PRkNrYFjUXRhXMb6KIQVhe9dCln8xS0=" alt="" />
       </div>
     </>
   )

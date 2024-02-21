@@ -27,11 +27,11 @@ const About = () => {
         <div className="about-main">
           <div className="about-left">
             <div className="about-title">
-              <h2>Honey Singh Key Maker </h2>
+              <h2>Near Me Key Maker </h2>
             </div>
             <div className="about-detail">
-              <p>If you're locked out of your car, lost your keys, or need ignition repairs, our automotive locksmiths have got you covered. We're equipped to work on a wide range of vehicle makes and models.</p>
-              <p>From rekeying and lock replacement to installation of advanced security systems, we ensure the safety of your home. Our experts can assess your property and recommend tailored solutions to enhance your security.</p>
+              <p>Welcome to Near Me Key Maker, your trusted partner for all your key-related needs! Whether you find yourself locked out of your home, office, or vehicle, our skilled and efficient key makers are ready to come to your rescue.</p>
+              <p> With a commitment to prompt and reliable service, we understand the urgency of key emergencies and strive to provide quick solutions at your convenience.</p>
             </div>
           </div>
           <div className="about-right">

@@ -57,8 +57,8 @@ const ContactUs = () => {
         <div className="contact-main">
           <div className="contact-left">
             <h2>Are you locked out of your home or car? </h2>
-            <p>Look no further than Honey Singh Key Maker Gaur City! We are your trusted and experienced locksmith service provider dedicated to resolving all your lock and key emergencies with utmost efficiency and professionalism.</p>
-            <p>Emergencies can happen at any time, which is why we're available around the clock. You can rely on us to assist you whenever you're in need.</p>
+            <p>At Near Me Key Maker, we pride ourselves on delivering a wide range of key-making services to meet your diverse requirements. From duplicating keys for residential and commercial properties to crafting high-security keys for advanced locking systems, for experienced technicians use state-of-the-art equipment to ensure precision and accuracy.</p>
+            <p> Count on us for efficient key cutting, programming, and duplication services, all conveniently located near you.</p>
             {/* <div className="contact-button">
               <p>Contact With Us</p>
             </div> */}
