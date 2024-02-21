@@ -49,9 +49,9 @@ const NavBar = (props) => {
 
   const [menuClass, setMenuClass] = useState('nav-menu');
 
-  const toggleMenu = () => {
-    setMenuClass(menuClass === 'nav-menu' ? 'nav-menu responsive' : 'nav-menu');
-  };
+  // const toggleMenu = () => {
+  //   setMenuClass(menuClass === 'nav-menu' ? 'nav-menu responsive' : 'nav-menu');
+  // };
 
   // Function to close the menu when a navigation link is clicked
   const closeMenu = () => {

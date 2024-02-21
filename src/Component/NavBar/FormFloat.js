@@ -38,45 +38,48 @@ const FormFloat = (props) => {
     return (
         <div className='FormFloat'>
             <div className="FormFloat-box">
-                <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <input
-                            value={formData.name}
-                            type="text"
-                            className="form-control"
-                            id="name"
-                            placeholder="Name"
-                            onChange={handleChange}
-                            required
-                        />
+                <div className="FormFloat-card">
+                    <div className="close-button" >
+                        <p onClick={props.formIsClose}>X</p>
                     </div>
-                    <div className="mb-3">
-                        <input
-                            value={formData.number}
-                            type="number"
-                            className="form-control"
-                            id="number"
-                            placeholder="Phone No."
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-3">
-                        <textarea
-                            value={formData.message}
-                            className="form-control"
-                            id="message"
-                            placeholder="Message"
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <button type="submit" className="btn btn-primary">
-                        Get Call Back
-                    </button>
-                </form>
-                <div className="close-button" onClick={props.formIsClose}>
-                    X
+                    <form onSubmit={handleSubmit}>
+                        <div className="mb-3">
+                            <input
+                                value={formData.name}
+                                type="text"
+                                className="form-control"
+                                id="name"
+                                placeholder="Name"
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <input
+                                value={formData.number}
+                                type="number"
+                                className="form-control"
+                                id="number"
+                                placeholder="Phone No."
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <textarea
+                                value={formData.message}
+                                className="form-control"
+                                id="message"
+                                placeholder="Message"
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
+                        <button type="submit" className="btn btn-primary">
+                            Get Call Back
+                        </button>
+                    </form>
+
                 </div>
             </div>
         </div>
