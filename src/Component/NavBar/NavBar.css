@@ -14,6 +14,10 @@
     display: none;
 }
 
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
 .nav-menu {
     width: 100%;
     padding-right: 15px;
@@ -23,6 +27,7 @@
 }
 
 .navBar-logo img {
+    padding: 5px;
     margin-bottom: 0;
     max-height: 80px;
 }
@@ -35,8 +40,8 @@
 .nav-menu ul li a {
     padding: 10px 0px !important;
     font-size: 17px;
-    font-weight: 400;
-    color: #0075b8 !important;
+    font-weight: 500;
+    color: rgb(51, 51, 51) !important;
     text-transform: capitalize;
 }
 
@@ -51,7 +56,7 @@
     margin: 0;
     color: #0075b8;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .call-number p a {
@@ -59,15 +64,15 @@
     margin: 0;
     color: #0075b8;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .call-number svg {
     margin: 0;
     color: #0075b8;
     font-size: 30px;
-    font-weight: 500;
-    margin-right: 15px;
+    font-weight: 700;
+    margin-right: 10px;
 }
 
 .floatbar{
@@ -91,7 +96,7 @@
    background-color:#013e61 ;
 }
 .floatbar-icon svg{
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 30px;
 }
 .floatbar-icon:first-child{
@@ -168,9 +173,6 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .banner-heading h1 {
-        font-size: 40px;
-    }
     .floatbar{
         position: fixed;
         bottom: 10px;

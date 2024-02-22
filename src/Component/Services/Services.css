@@ -60,6 +60,7 @@
     color: black;
     padding: 5px;
     margin: 0;
+    font-size: 16px;
 }
 
 @media (min-width: 1200px) {
@@ -103,7 +104,4 @@
         gap: 1rem;
     }
 
-    .service-box {
-        max-width: 320px;
-    }
 }

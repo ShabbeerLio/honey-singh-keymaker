@@ -17,8 +17,15 @@
 }
 
 .footer-detail img {
-    margin-bottom: 0;
+    margin-bottom: 10px;
     max-height: 80px;
+    background-color: white;
+    border-radius: 5px;
+    
+}
+
+.quick-link ul li{
+    padding: 5px 0px;
 }
 
 .quick-link ul li a {
@@ -33,6 +40,13 @@
 
 .footer-contact ul li {
     display: flex;
+    padding: 5px 0px;
+    align-items: center;
+}
+.footer-contact ul li:first-child {
+    display: flex;
+    padding: 5px 0px;
+    align-items: baseline;
 }
 
 .footer-contact ul li a {
@@ -46,6 +60,7 @@
 }
 .footer-contact ul li p svg {
     margin-right: 10px;
+    font-size: 20px;
 }
 
 .footer-copyright {
@@ -73,7 +88,6 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    display: grid;
 }
 
 .services-images {
@@ -109,6 +123,15 @@
     }
     .footer-main ,.footer-down{
         max-width: 520px;
+    }
+
+    .footer-copyright {
+       display: block;
+        margin-top: 20px;
+    }
+    .footer-copyright p{
+        margin: 0px;
+        justify-content: center;
     }
 
 }

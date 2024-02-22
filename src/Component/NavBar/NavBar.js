@@ -73,16 +73,16 @@ const NavBar = (props) => {
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
                   <li className="nav-item">
-                    <a className="nav-link active" href="#home" onClick={closeMenu}>HOME</a>
+                    <a className="nav-link active" href="#home" onClick={closeMenu}>Home</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#about" onClick={closeMenu}>ABOUT US</a>
+                    <a className="nav-link" href="#about" onClick={closeMenu}>About Us</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#services" onClick={closeMenu}>OUR SERVICES</a>
+                    <a className="nav-link" href="#services" onClick={closeMenu}>Our Services</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#contactUs" onClick={closeMenu}>CONTACT US</a>
+                    <a className="nav-link" href="#contactUs" onClick={closeMenu}>Contact Us</a>
                   </li>
                   <li>
                     <div className="call-number-responsive justify-content-end" onClick={handleGetNumber}>

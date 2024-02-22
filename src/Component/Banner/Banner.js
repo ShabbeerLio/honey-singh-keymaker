@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import ScrollReveal from 'scrollreveal'
+import bannerimg from "../../Assets/10.png"
 import "./Banner.css"
 
 const Banner = () => {
@@ -21,9 +22,9 @@ const Banner = () => {
     <>
       <div className="banner">
         <div className="banner-heading">
-          <h1 >Key Maker in Gaur City</h1>
+          <h1 >Near Me Key Maker</h1>
         </div>
-        <img src="https://media.istockphoto.com/id/1185097959/photo/a-mans-hand-holding-a-car-key.jpg?s=612x612&w=0&k=20&c=5rdk5ibFfwF1PRkNrYFjUXRhXMb6KIQVhe9dCln8xS0=" alt="" />
+        <img src={bannerimg} alt="" />
       </div>
     </>
   )

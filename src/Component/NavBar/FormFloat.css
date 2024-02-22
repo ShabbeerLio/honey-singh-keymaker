@@ -44,5 +44,6 @@
 }
 .close-button p:hover{
     background-color: red;
+    color: white;
 }
 

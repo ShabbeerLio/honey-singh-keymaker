@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./Footer.css"
 import Logo from "../../Assets/Logo.png"
-import footerimg1 from "../../Assets/service5.jpg"
-import footerimg2 from "../../Assets/service4.jpg"
-import footerimg3 from "../../Assets/service2.jpg"
-import footerimg4 from "../../Assets/service8.jpg"
-import footerimg5 from "../../Assets/service7.jpg"
-import footerimg6 from "../../Assets/service1.jpg"
+import Data from '../Data/Data'
 
 const Footer = (props) => {
 
@@ -36,16 +31,7 @@ const Footer = (props) => {
         };
     }, []);
 
-    const [menuClass, setMenuClass] = useState('nav-menu');
-
-    const toggleMenu = () => {
-        setMenuClass(menuClass === 'nav-menu' ? 'nav-menu responsive' : 'nav-menu');
-    };
-
-    // Function to close the menu when a navigation link is clicked
-    const closeMenu = () => {
-        setMenuClass('nav-menu');
-    };
+    const [serviceData, setServiceData] = useState(Data);
     return (
         <>
             <div className="footer">
@@ -58,28 +44,30 @@ const Footer = (props) => {
                         <h2>Quick Link</h2>
                         <ul>
                             <li><a href="#home">
-                                HOME
+                            Home
                             </a></li>
                             <li><a href="#about">
-                                ABOUT US
+                            About Us
                             </a></li>
                             <li><a href="#services">
-                                OUR SERVICES
+                            Our Services
                             </a></li>
                             <li><a href="#contactUs">
-                                CONTACT US
+                            Contact Us
                             </a></li>
                         </ul>
                     </div>
                     <div className="footer-services">
                         <h2>Services</h2>
                         <div className="services-images">
-                            <img src={footerimg1} alt="" />
-                            <img src={footerimg2} alt="" />
-                            <img src={footerimg3} alt="" />
-                            <img src={footerimg4} alt="" />
-                            <img src={footerimg5} alt="" />
-                            <img src={footerimg6} alt="" />
+                            {serviceData.slice(2).map((item) => (
+                                <>
+                                <div className="service-image-box">
+                                    <img src={item.cover} alt="" />
+
+                                </div>
+                                </>
+                            ))}
                         </div>
                     </div>
                     <div className="footer-contact">
@@ -139,7 +127,7 @@ const Footer = (props) => {
                 </div>
                 <div className="footer-down">
                     <div className="footer-copyright">
-                        <p>© 2024 Near Me Key Makerr</p>
+                        <p>© 2024 Near Me Key Maker</p>
                         <p>Designed By :<a href="https://globalitsources.com/"> Global IT Sources</a></p>
                     </div>
                 </div>
