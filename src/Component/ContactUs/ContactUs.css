@@ -19,9 +19,14 @@
 }
 
 .contact-left h2 {
-    color: #212121;
-    font-size: 36px;
-    margin-bottom: 10px;
+    text-align: center;
+    color: #000000;
+    font-size: 38px;
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 23px;
+    font-weight: bold;
 }
 
 .contact-left p {
@@ -47,7 +52,7 @@
 
 .contact-caller-button a svg {
     /* background-color: rgb(8, 204, 1); */
-    font-size: 60px;
+    font-size: 62px;
     color: white;
     border-radius: 50%;
     padding: 10px;
@@ -102,7 +107,8 @@
 
 .contact-right button {
     width: 100%;
-    background-color: #002d47;
+    background-color: yellow;
+    color: black;
 }
 
 .contact-right button:hover {

@@ -17,9 +17,6 @@ const NavBar = (props) => {
   }
 
 
-  const handleGetNumber = (e) => {
-    console.log(e)
-  }
 
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]');
@@ -67,8 +64,10 @@ const NavBar = (props) => {
               <a className="navBar-logo" href="#home">
                 <img src={Logo} alt="" />
               </a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
+              <button className="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="toggler-icon top-bar"></span>
+                <span className="toggler-icon middle-bar"></span>
+                <span className="toggler-icon bottom-bar"></span>
               </button>
               <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav ml-auto">
@@ -85,7 +84,7 @@ const NavBar = (props) => {
                     <a className="nav-link" href="#contactUs" onClick={closeMenu}>Contact Us</a>
                   </li>
                   <li>
-                    <div className="call-number-responsive justify-content-end" onClick={handleGetNumber}>
+                    <div className="call-number-responsive justify-content-end" >
                       <div className="call-number-icon">
                         <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
                           <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
@@ -115,7 +114,7 @@ const NavBar = (props) => {
                   </li>
                 </ul>
               </div>
-              <div className="call-number justify-content-end" onClick={handleGetNumber}>
+              <div className="call-number justify-content-end">
                 <div className="call-number-icon">
                   <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
                     <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2">
